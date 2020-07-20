@@ -1,0 +1,44 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+// Font Awesome
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/regular.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+
+// DataTable
+@import "~datatables.net-bs4/css/dataTables.bootstrap4.min.css";
+
+// AdminLTE
+@import "~admin-lte/build/scss/AdminLTE.scss";
+
+//Select2
+@import "~select2/dist/css/select2.css";
+
+
+.select2 {
+  width: 100% !important;
+}
+.mutiple {
+  width: 10px !important;
+}
+
+.required::after {
+  content: "*";
+  color: red;
+}
+
+.options {
+  white-space: nowrap;
+}
+
+.options > * {
+  display: inline-block;
+}
