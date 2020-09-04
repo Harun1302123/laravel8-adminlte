@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5a993688a4552c644071256b6b56c39a",
+    "content-hash": "f8b1b1bb4e6df995d92c84c7eb72ffa2",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1127,6 +1127,46 @@
                 "storage"
             ],
             "time": "2020-05-18T15:13:39+00:00"
+        },
+        {
+            "name": "lucascudo/laravel-pt-br-localization",
+            "version": "v1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lucascudo/laravel-pt-BR-localization.git",
+                "reference": "19f60fa3dc7246ff20a478d79da3015a8e03c86b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lucascudo/laravel-pt-BR-localization/zipball/19f60fa3dc7246ff20a478d79da3015a8e03c86b",
+                "reference": "19f60fa3dc7246ff20a478d79da3015a8e03c86b",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Lucascudo\\LaravelPtBRLocalization\\LaravelPtBRLocalizationServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Lucascudo\\LaravelPtBRLocalization\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Cascudo",
+                    "email": "lucas.sisau@gmail.com"
+                }
+            ],
+            "description": "Arquivos de linguagem em Português do Brasil (pt-BR) para Laravel >= 5.6",
+            "time": "2020-09-04T09:02:44+00:00"
         },
         {
             "name": "monolog/monolog",

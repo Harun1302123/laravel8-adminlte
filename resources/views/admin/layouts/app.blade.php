@@ -49,6 +49,7 @@
     </div>
 </div>
   @include('admin.includes.footer')
+  @include('admin.includes.success')
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">

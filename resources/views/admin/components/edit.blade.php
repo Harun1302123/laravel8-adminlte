@@ -6,11 +6,12 @@
         <div class="card-body">
             <form id="form-adicionar" action="{{ $url ?? '/' }}" method="post" enctype="multipart/form-data">
                 @csrf
+                @method('put')
                 {{ $form ?? null }}
             </form>
         </div>
         <div class="card-footer">
-            <button type="submit" form="form-adicionar" class="btn btn-primary float-right">Cadastrar</button>
+            <button type="submit" form="form-adicionar" class="btn btn-primary float-right">Editar</button>
             {{ $voltar ?? null }}
         </div>
     </div>
