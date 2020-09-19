@@ -15,7 +15,7 @@
                     <tr>
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
-                        <td class="options"> 
+                        <td class="options">
                             @can('update',$user)
                                 <a href="{{ route('users.edit', $user->id ) }}" class="btn btn-primary"><i class="fas fa-pen"></i></a>
                             @endcan
@@ -38,7 +38,6 @@
 @endsection
 
 @push('scripts')
-        <script src="{{ asset('js/components/dataTable.js') }}"></script>
-        <script src="{{ asset('js/components/sweetAlert.js') }}"></script>
+    <script src="{{ asset('js/components/dataTable.js') }}"></script>
+    <script src="{{ asset('js/components/sweetAlert.js') }}"></script>
 @endpush
-    

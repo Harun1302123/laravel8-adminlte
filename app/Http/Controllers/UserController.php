@@ -42,7 +42,7 @@ class UserController extends Controller
      */
     public function store(StoreUserRequest $request)
     {
-        User::create($request->except('confirm_password'));
+        User::create($request->all());
         return redirect()->route('users.index')->with('success',true);
     }
 
@@ -77,12 +77,7 @@ class UserController extends Controller
      */
     public function update(UpdateUserRequest $request,User $user)
     {
-        if($request->password){
-            $user->update($request->all());
-
-        }else{
-            $user->update($request->except('password'));
-        }
+        $user->update($request->all());
         return redirect()->route('users.index')->with('success',true);
     }
 

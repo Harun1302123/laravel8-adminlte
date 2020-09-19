@@ -39,6 +39,17 @@
 							</p>
 						</a>
 					</li>
+                @endcan
+                @can('viewAny', App\Category::class)
+					<li class="nav-item has-treeview ">
+						<a href="{{ route('categories.index') }}"
+							class="nav-link {{ Route::is('categories.index') ? 'active' : '' }}">
+							<i class="nav-icon fa fa-list-alt"></i>
+							<p>
+								Categorias
+							</p>
+						</a>
+					</li>
 				@endcan
 			</ul>
 		</nav>

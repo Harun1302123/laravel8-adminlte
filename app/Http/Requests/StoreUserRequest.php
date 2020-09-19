@@ -26,8 +26,8 @@ class StoreUserRequest extends FormRequest
         return [
             'name' => 'required|min:3|max:191|string',
             'email' => 'email|required|min:6|unique:users',
-            'password' => 'required|string|min:6|confirmed',
-            'confirm_password' => 'required_with:password',
+            'password' => 'sometimes|required|alpha_num|between:6,20',
+            'password_confirmation' => 'required_with:password',
         ];
     }
 
@@ -36,7 +36,7 @@ class StoreUserRequest extends FormRequest
             'name' => 'nome',
             'email' => 'e-mail',
             'password' => 'senha',
-            'confirm_password' => 'confirme sua senha'
+            'password_confirmation' => 'confirme sua senha'
         ];
     }
 }

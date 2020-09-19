@@ -3,14 +3,7 @@
     @component('admin.components.show')
         @slot('title', $user->name)
         @slot('form')
-            @include('admin.users.form', ['show' => true])
+            @include('admin.users.form')
         @endslot
     @endcomponent
 @endsection
-
-
-@push('scripts')
-    <script>
-        $('.form-control').attr('readonly',true);
-    </script>
-@endpush
