@@ -7,10 +7,12 @@
 	<div class="sidebar">
 		<div class="user-panel mt-3 pb-3 mb-3 d-flex">
 			<div class="image">
-				<img src="https://adminlte.io/themes/v3/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-			</div>
+                <a href="{{ route('users.show', Auth::user()->id) }}">
+				    <img src="https://adminlte.io/themes/v3/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                </a>
+            </div>
 			<div class="info">
-				<a href="#" class="d-block">Usuário</a>
+				<a href="{{ route('users.show', Auth::user()->id) }}" class="d-block">{{ Auth::user()->name }}</a>
 			</div>
 			<div class="info align-self-center">
 				<form id="logout-form" method="post" action="{{ route('logout') }}">

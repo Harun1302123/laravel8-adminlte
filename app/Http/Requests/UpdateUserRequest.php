@@ -24,9 +24,9 @@ class UpdateUserRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|min:3|max:191|string',
-            'email' => 'email|required|min:6|unique:users,email,' . $this->user->id,
-            'password' => 'nullable|string|min:6|confirmed',
+            'name' => 'required|between:3,191|string|unique:users,name,' . $this->user->id,
+            'email' => 'email|string|max:191|required|unique:users,email,' . $this->user->id,
+            'password' => 'nullable|string|between:8,20|confirmed',
             'password_confirmation' => 'required_with:password',
         ];
     }
@@ -36,7 +36,7 @@ class UpdateUserRequest extends FormRequest
             'name' => 'nome',
             'email' => 'e-mail',
             'password' => 'senha',
-            'password_confirmation' => 'confirme sua senha'
+            'password_confirmation' => 'confirmação de senha'
         ];
     }
 }

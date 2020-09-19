@@ -42,7 +42,8 @@ class UserController extends Controller
      */
     public function store(StoreUserRequest $request)
     {
-        User::create($request->all());
+        $request = User::verifyPassword($request);
+        User::create($request);
         return redirect()->route('users.index')->with('success',true);
     }
 
@@ -77,7 +78,8 @@ class UserController extends Controller
      */
     public function update(UpdateUserRequest $request,User $user)
     {
-        $user->update($request->all());
+        $request = User::verifyPassword($request);
+        $user->update($request);
         return redirect()->route('users.index')->with('success',true);
     }
 

@@ -17,10 +17,10 @@
                         <td>{{ $user->email }}</td>
                         <td class="options">
                             @can('update',$user)
-                                <a href="{{ route('users.edit', $user->id ) }}" class="btn btn-primary"><i class="fas fa-pen"></i></a>
+                                <a href="{{ route('users.edit', $user->id) }}" class="btn btn-primary"><i class="fas fa-pen"></i></a>
                             @endcan
                             @can('view',$user)
-                                <a href="{{ route('users.show', $user->id ) }}" class="btn btn-dark"><i class="fas fa-search"></i></a>
+                                <a href="{{ route('users.show', $user->id) }}" class="btn btn-dark"><i class="fas fa-search"></i></a>
                             @endcan
                             @can('delete',$user)
                                 <form action="{{ route('users.destroy', $user->id) }}" class="form-delete" method="post">

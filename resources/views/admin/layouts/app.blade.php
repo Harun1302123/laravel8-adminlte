@@ -31,7 +31,6 @@
             <div class="content">
                 <div class="container-fluid">
                     @yield('content')
-                    <button class="btn btn-danger" data-toggle="control-sidebar">Toggle Right Sidebar</button>
                 </div>
             </div>
         </div>

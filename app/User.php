@@ -37,4 +37,15 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public static function verifyPassword($request){
+        if($request->password){
+            $request['password'] = \bcrypt($request['password']);
+            $request = $request->except('password_confirmation');
+        }else{
+            $request = $request->except(['password','password_confirmation']);
+        }
+
+        return $request;
+    }
 }
